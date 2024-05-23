@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+<div class="card">
+
+    <div>
+        <h1>Date Picker to Timestamp</h1>
+        <form>
+            <label for="fromDate">From Date:</label>
+            
+            <input type="datetime-local" class="fromDate" id="fromDate" name="fromDate"><br><br>
+    
+            <label for="toDate">To Date:</label>
+            <input type="datetime-local" class="fromDate" id="toDate" name="toDate"><br><br>
+    
+            <label for="gmtOffset">GMT Offset:</label>
+            <select id="gmtOffset" class="fromDateGMT" name="gmtOffset">
+                <option value="0">GMT+0000</option>
+                <option value="1">GMT+0100</option>
+                <option value="2">GMT+0200</option> 
+                <!-- Add other GMT offsets as needed -->
+             </select><br><br> 
+    
+            <input type="button" class="button" value="SEARCH" onclick="convertToTimestamp()">
+        </form>
+    
+       
+    </div>
+
+         <div class="weather">
+            <img src="clear.png" class="weather-icon">
+            <h1 class="temp">22°C</h1>
+            <h2 class="city">Temperature</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="humidity.png">
+                <div>
+                <p class="humidity">50%</p>
+                <p>Humidity</p>
+            </div>
+        </div>
+        <div class="col">
+            <img src="wind.png">
+        <div>
+        <p class="wind">15 km/h</p>
+        <p>CO2</p>
+         </div>
+        </div>
+</div>
+<div class="data-container" id="dataContainer"></div>
+<script src="weaher.js"></script>    
+</body>
+</html>
